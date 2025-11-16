@@ -1,0 +1,15 @@
+[submodule "agentdojo"]
+	path = externals/agentdojo
+	url = https://github.com/ceferisbarov/agentdojo
+[submodule "PurpleLlama"]
+	path = externals/PurpleLlama
+	url = https://github.com/ceferisbarov/PurpleLlama/
+[submodule "aether-cot-monitoring"]
+	path = externals/aether-cot-monitoring
+	url = https://github.com/ceferisbarov/aether-cot-monitoring
+[submodule "AdaptiveAttackAgent"]
+	path = externals/AdaptiveAttackAgent
+	url = https://github.com/ceferisbarov/AdaptiveAttackAgent
+[submodule "externals/nanogcg"]
+	path = externals/nanogcg
+	url = https://github.com/ceferisbarov/nanogcg

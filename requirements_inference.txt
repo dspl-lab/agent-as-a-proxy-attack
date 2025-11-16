@@ -1,0 +1,10 @@
+accelerate
+pre-commit
+inspect-ai
+protobuf
+sentencepiece
+torch
+transformers
+-e externals/agentdojo/
+-e externals/PurpleLlama/LlamaFirewall
+xgrammar
