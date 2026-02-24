@@ -11,12 +11,12 @@ HF_TOKEN="myhftoken"
 OPENROUTER_API_KEY="myopenroutertoken"
 OPENAI_API_KEY="myopenaitoken"
 ```
-You can also skip OpenAI token and everything with OpenRouter.
+You can also skip OpenAI token and use OpenRouter for everything.
 
 Next, we need to create two virtual environments, one for attack and one for inference.
 
 > [!WARNING]
-> We need two virtual environments because because both `nanogcg` and `AdaptiveAttackAgent` engines rely on an outdated prefix cache API from transformers version <= 4.45.0. We use one environment two use either of these engines to optimize attacks, but if you want to evaluate LLMs that require `transformers>4.45.0`, you will have to create another virtual environment.
+> We need two virtual environments because because both `nanogcg` and `AdaptiveAttackAgent` engines rely on an outdated prefix cache API from `transformers<=4.45.0`. We use one `attack` environment to use either of these engines to optimize attacks, but if you want to evaluate LLMs that require `transformers>4.45.0`, you will have to create another `inference` environment.
 
 
 ```sh
@@ -46,14 +46,14 @@ But you can skip this since we have already uploaded the results to the repo. Yo
 
 Next, we can run the monitors.
 
-Run AlignmentCheck and PromptGuard + AlignmentCheck with this script:
+Run AlignmentCheck and extract-and-evaluate monitors with these scripts:
 
 ```sh
 bash_scripts/run_alignmentcheck.sh
 bash_scripts/run_aether_cot_monitor.sh
 ```
 
-Again, we are in the process of uploading these logs and if they are not available, you can simply request them from us instead of running them yourselves.
+Again, we are in the process of uploading these logs and if they are not available, you can simply request them from us by opening an issue instead of running them yourselves.
 
 ## Generate targets
 We also need to generate targets for AlignmentCheck (see Appendix D for more details). We can use `python3 -m python_scripts.generate_targets` to do this. We used targets generated for `Qwen/Qwen2.5-7B-Instruct` for all models, but you can generate different targets for different models as well.
